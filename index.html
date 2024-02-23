@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Outfit:wght@500;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">  
+  
+  <title>Frontend Mentor | Tic Tac Toe</title>
+</head>
+<body>
+
+  <div class="home-page">
+    <div class="home-container">
+      <div class="xo">
+        <img class="top-xo" src="./assets/icon-x.svg" alt="">
+        <img class="top-xo" src="./assets/icon-o.svg" alt="">
+      </div>
+      <div class="home-choose">
+        <p class="pick-p">Pick player 1's mark</p>
+        <div class="pick-btn-container">
+          <button onclick="p1X()" class="choose-btn choose-x"></button>
+          <button onclick="p1O()" class="choose-btn choose-o"></button>
+        </div>
+        <p class="reminder">Remember: X goes first</p>
+      </div>
+      <button onclick="startWithCpu()" class="new-game-btn yellow-btn">New Game (vs CPU)</button>
+      <button onclick="showBoard()" class="new-game-btn cyan-btn">New Game (vs player)</button>
+    </div>
+  </div>
+
+  <div class="ann-back">
+    <div class="announcement-container">
+      <p class="secondary-winner"></p>
+      <div class="round-taker-container">
+        <img src="./assets/icon-o.svg" alt="" class="round-taker">
+        <p class="primary-winner">TAKES THE ROUND</p>
+      </div>
+      <div class="announcement-buttons">
+        <button onclick="quit()" class="quit">QUIT</button>
+        <button onclick="startGame()" class="next-round yellow-btn">NEXT ROUND</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="restart-back">
+    <div class="announcement-container">
+        <p class="primary-winner res-p">RESTART GAME?</p>
+        <div class="announcement-buttons">
+          <button onclick="cancel()" class="next-round make-grey">NO, CANCEL</button>
+          <button onclick="quit()" class="next-round yellow-btn">YES, RESTART</button>
+        </div>
+    </div>
+  </div>
+
+
+  <div class="gameboard">
+
+    <div class="xo">
+      <img class="top-xo" src="./assets/icon-x.svg" alt="">
+      <img class="top-xo" src="./assets/icon-o.svg" alt="">
+    </div>
+
+    <div class="turn">
+      <img  class="turn-icon" src="" alt="">
+      <p class="turn-indicator">TURN</p>
+    </div>
+
+    <div class="restart-container">
+      <img onclick="restart()" src="./assets/icon-restart.svg" alt="">
+    </div>
+
+    <div class="box" id="0"></div>
+    <div class="box" id="1"></div>
+    <div class="box" id="2"></div>
+    <div class="box" id="3"></div>
+    <div class="box" id="4"></div>
+    <div class="box" id="5"></div>
+    <div class="box" id="6"></div>
+    <div class="box" id="7"></div>
+    <div class="box" id="8"></div>
+    <div class="tile">
+      <p class="player-p p1"></p>
+      <h3 class="p1-score score">0</h3>
+    </div>
+    <div class="tile">
+      <p class="player-p tie">Ties</p>
+      <h3 class="tie-score score">0</h3>
+    </div>
+    <div class="tile">
+      <p class="player-p p2"></p>
+      <h3 class="p2-score score">0</h3>
+    </div>
+  </div>
+ 
+  <script src="app.js"></script>
+</body>
+</html>
